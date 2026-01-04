@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <title>Tin học 12 - Trang 101</title>
+</head>
+<body>
+
+<p><b>Luyện tập 1 trang 101 Tin học 12: Lời giải:</b></p>
+
+<p>
+Hai định dạng CSS "#p123+ p" và "h2#p123 + p" khác nhau về cách chọn phần tử HTML để áp dụng định dạng.
+</p>
+
+<p>
+- "#p123+ p": Đây là một selector có kết hợp giữa ID selector và sibling combinator. Nó chọn các phần tử p là anh em liền kề (sibling) của phần tử có ID là "p123". Ví dụ, nếu có cấu trúc HTML như sau:
+</p>
+
+<pre>
+&lt;div id="p123"&gt;&lt;/div&gt;
+&lt;p&gt;Đây là phần tử p đầu tiên&lt;/p&gt;   Đây là phần tử p đầu tiên
+&lt;p&gt;Đây là phần tử p thứ hai&lt;/p&gt;    Đây là phần tử p thứ hai
+</pre>
+
+<p>
+Trong trường hợp này, định dạng CSS "#p123+ p" sẽ áp dụng cho phần tử p thứ hai, vì nó là anh em liền kề của phần tử có ID là "p123".
+</p>
+
+<p>
+- "h2#p123 + p": Đây là một selector có kết hợp giữa element selector (h2), ID selector và sibling combinator. Nó chọn các phần tử p là anh em liền kề của phần tử h2 có ID là "p123". Ví dụ, nếu có cấu trúc HTML như sau:
+</p>
+
+<pre>
+&lt;h2 id="p123"&gt;&lt;/h2&gt;      Đây là phần tử p đầu tiên
+&lt;p&gt;Đây là phần tử p đầu tiên&lt;/p&gt;   Đây là phần tử p đầu tiên
+&lt;p&gt;Đây là phần tử p thứ hai&lt;/p&gt;    Đây là phần tử p thứ hai
+</pre>
+
+<p>
+Trong trường hợp này, định dạng CSS "h2#p123 + p" sẽ áp dụng cho phần tử p thứ hai, vì nó là anh em liền kề của phần tử h2 có ID là "p123".
+</p>
+
+<p><b>Luyện tập 2 trang 101 Tin học 12:</b></p>
+
+<p>
+Trong phần Thực hành, các tên riêng (tên người, tên tổ chức) cần được bổ sung định dạng đóng khung và in nghiêng. Em sẽ thực hiện các yêu cầu này như thế nào?
+</p>
+
+<p><b>Lời giải:</b></p>
+
+<pre>
+.name {
+
+  font-style: italic; /* In nghiêng */
+
+  border: 1px solid #000; /* Đóng khung bằng đường viền màu đen */
+
+  padding: 2px; /* Thêm đệm xung quanh nội dung để không quá sát viền */
+
+  display: inline-block; /* Đảm bảo viền ôm sát nội dung */
+
+}
+</pre>
+
+<p><b>Vận dụng 1 trang 101 Tin học 12:</b></p>
+
+<p>
+Tìm hiểu thêm các dạng pseudo-class khác, nêu ý nghĩa và tìm ví dụ ứng dụng thực tế cho các kiểu bộ chọn này
+</p>
+
+<p><b>Lời giải:</b></p>
+
+<p>- :hover - Dạng pseudo-class này được kích hoạt khi người dùng di chuột qua một phần tử. Nó cho phép em áp dụng các định dạng CSS khi phần tử đang được hover.</p>
+
+<p>- :active - Dạng pseudo-class này được kích hoạt khi phần tử đang được nhấn (khi người dùng giữ chuột trái). Em có thể sử dụng nó để áp dụng các định dạng CSS khi phần tử đang ở trạng thái active.</p>
+
+<p>- :focus - Dạng pseudo-class này được kích hoạt khi phần tử đang trong trạng thái focus (thường xảy ra khi người dùng click hoặc sử dụng phím tab để di chuyển đến phần tử). em có thể sử dụng nó để áp dụng các định dạng CSS khi phần tử đang trong trạng thái focus.</p>
+
+<p>- :nth-child() - Dạng pseudo-class này cho phép bạn chọn các phần tử con trong một phần tử cha dựa trên vị trí của chúng. Bạn có thể sử dụng nó để áp dụng các định dạng CSS cho phần tử con cụ thể.</p>
+
+<p><b>Vận dụng 2 trang 101 Tin học 12:</b></p>
+
+<p>
+Tìm hiểu thêm các dạng pseuso-element khác, nêu ý nghĩa và tìm ví dụ ứng dụng thực tế cho các kiểu bộ chọn này.
+</p>
+
+<p><b>Lời giải:</b></p>
+
+<p>- ::before - Dạng pseudo-element này cho phép bạn chèn nội dung vào phần tử trước nội dung chính của nó. Em có thể sử dụng nó để thêm các biểu tượng, ký hiệu hoặc phần tử trang trí trước một phần tử.</p>
+
+<p>- ::after - Dạng pseudo-element này cho phép bạn chèn nội dung vào phần tử sau nội dung chính của nó. Em có thể sử dụng nó để thêm các phần tử trang trí hoặc hiệu ứng sau một phần tử.</p>
+
+<p>- ::first-line - Dạng pseudo-element này cho phép bạn áp dụng các định dạng CSS cho dòng đầu tiên của một phần tử chứa nội dung văn bản. Em có thể sử dụng nó để thay đổi kiểu chữ, khoảng cách dòng, hoặc các thuộc tính khác cho dòng đầu tiên.</p>
+
+</body>
+</html>
